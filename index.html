@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>A Place of Art's</title>
+
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Background Hero Section */
+    .hero-section {
+      height: 100vh;
+      background: url('background.png') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    /* Dark overlay */
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    /* Content */
+    .overlay {
+      text-align: center;
+      color: white;
+      z-index: 1;
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+
+    .title {
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background-color: white;
+      color: black;
+      padding: 12px 28px;
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    a:link, a:visited{
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Fade In Animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hero-section">
+    <div class="overlay">
+      <h1 class="title">A PLACE OF ART'S</h1>
+      <button class="btn"><a href="categories.html">Explore Now</a></button>
+    </div>
+  </div>
+</body>
+</html>

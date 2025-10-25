@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Place of Art's</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: url('background.png') no-repeat center/cover;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+      animation: fadeInBody 1s ease-in-out;
+    }
+
+    @keyframes fadeInBody {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .wrapper {
+      text-align: center;
+      animation: slideUp 1.2s ease-in-out;
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .title {
+      font-size: 2.8rem;
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: 1px;
+      text-shadow: 0 0 15px #00eaff;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #bfbfbf;
+      margin-bottom: 40px;
+      font-size: 1.1rem;
+    }
+
+    .glass-container {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(15px);
+      border-radius: 16px;
+      box-shadow: 0 0 25px rgba(0, 234, 255, 0.2);
+      padding: 50px 70px;
+      display: inline-block;
+      animation: fadeInGlass 1.4s ease-in-out;
+    }
+
+    @keyframes fadeInGlass {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .icon-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 45px 60px;
+    }
+
+    .icon-card {
+      text-decoration: none;
+      color: white;
+      text-align: center;
+      transition: transform 0.3s ease, filter 0.3s ease;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: iconFadeUp 1s ease forwards;
+    }
+
+    /* stagger animation for icons */
+    .icon-card:nth-child(1) { animation-delay: 0.2s; }
+    .icon-card:nth-child(2) { animation-delay: 0.3s; }
+    .icon-card:nth-child(3) { animation-delay: 0.4s; }
+    .icon-card:nth-child(4) { animation-delay: 0.5s; }
+    .icon-card:nth-child(5) { animation-delay: 0.6s; }
+    .icon-card:nth-child(6) { animation-delay: 0.7s; }
+    .icon-card:nth-child(7) { animation-delay: 0.8s; }
+    .icon-card:nth-child(8) { animation-delay: 0.9s; }
+    .icon-card:nth-child(9) { animation-delay: 1s; }
+    .icon-card:nth-child(10) { animation-delay: 1.1s; }
+
+    @keyframes iconFadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .icon-card img {
+      width: 80px;
+      height: 80px;
+      filter: brightness(0) invert(1);
+      opacity: 0.9;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+
+    .icon-card p {
+      margin-top: 12px;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .icon-card:hover {
+      transform: scale(1.15);
+      filter: drop-shadow(0 0 10px #00eaff);
+    }
+
+    .icon-card:hover img {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .icon-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .glass-container {
+        padding: 40px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .icon-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+      }
+      .glass-container {
+        padding: 25px;
+      }
+      .title {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <h1 class="title">A Place of Art's</h1>
+    <p class="subtitle">Explore the Crafts of Andhra Pradesh</p>
+
+    <div class="glass-container">
+      <div class="icon-grid">
+        <a href="KTpage.html" class="icon-card">
+          <img src="KPicon.png" alt="Kondapalli Toys" />
+          <p>Kondapalli Toys</p>
+        </a>
+        <a href="ETpage.html" class="icon-card">
+          <img src="ETicon.png" alt="Etikoppaka Toys" />
+          <p>Etikoppaka Toys</p>
+        </a>
+        <a href="SK.html" class="icon-card">
+          <img src="SKicon.png" alt="Srikalahasti Kalamkari" />
+          <p>Srikalahasti Kalamkari</p>
+        </a>
+        <a href="BV.html" class="icon-card">
+          <img src="BVicon.png" alt="Bobbili Veena" />
+          <p>Bobbili Veena</p>
+        </a>
+        <a href="ABL.html" class="icon-card">
+          <img src="ABLicon.png" alt="Andhra Brass Lamp" />
+          <p>Andhra Brass Lamp</p>
+        </a>
+        <a href="UWC.html" class="icon-card">
+          <img src="UWCicon.png" alt="Udayagiri Wooden Cutlery" />
+          <p>Udayagiri Wooden Cutlery</p>
+        </a>
+        <a href="BB.html" class="icon-card">
+          <img src="BBicon.png" alt="Budithi Brassware" />
+          <p>Budithi Brassware</p>
+        </a>
+        <a href="TWC.html" class="icon-card">
+          <img src="TWCicon.png" alt="Tirupati Wood Carvings" />
+          <p>Tirupati Wood Carvings</p>
+        </a>
+        <a href="KP.html" class="icon-card">
+          <img src="KPicon.png" alt="Kallam Paintings" />
+          <p>Kallam Paintings</p>
+        </a>
+        <a href="BC.html" class="icon-card">
+          <img src="BCicon.png" alt="Bamboo Crafts" />
+          <p>Bamboo Crafts</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

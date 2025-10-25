@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Shop Easy</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #ffffff;
+            margin: 0;
+            padding: 0;
+            opacity: 0;
+            animation: fadeInUp 0.9s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Header section */
+        header {
+            width: 100%;
+            position: relative;
+            padding: 20px 40px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: flex-end;
+            /* aligns Home button to the right */
+            background: #ffffff;
+        }
+
+        .home-btn {
+            text-decoration: none;
+            background: #012a63;
+            color: white;
+            padding: 10px 22px;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .home-btn:hover {
+            background: #054c9b;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 40px auto;
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .content {
+            width: 48%;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #012a63;
+            line-height: 1.2;
+            margin: 0 0 20px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.65;
+            color: #4c4c4c;
+            width: 100%;
+        }
+
+        .img-box {
+            width: 45%;
+        }
+
+        .img-box img {
+            width: 100%;
+            border-radius: 40px;
+            object-fit: cover;
+        }
+
+        @media(max-width: 900px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .content,
+            .img-box {
+                width: 100%;
+            }
+
+            header {
+                justify-content: center;
+                /* center button on mobile */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="home-btn">Home</a>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <h1>Tirupati Wood Carvings</h1>
+            <p>
+                Tirupati Wood Carvings are a traditional handicraft of Andhra Pradesh, showcasing the skill, artistry,
+                and heritage of local artisans. Known for their intricate designs and fine detailing, these carvings
+                transform wood into decorative, functional, and spiritual art pieces.
+
+                Artisans use high-quality wood to craft a variety of items, including idols, panels, frames, temple
+                décor, and figurines, reflecting both mythological stories and contemporary motifs. Each piece is
+                hand-carved with precision, making every creation unique and culturally significant.Tirupati Wood
+                Carvings are more than just decorative items—they are a blend of tradition, art, and heritage,
+                preserving the rich cultural legacy of Andhra Pradesh for generations to come.
+            </p>
+        </div>
+
+        <div class="img-box">
+            <img src="Tirupati Wood Carvings.jpg" alt="Kondapalli Dolls">
+        </div>
+    </div>
+
+</body>
+
+</html>
