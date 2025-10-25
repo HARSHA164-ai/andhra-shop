@@ -5,6 +5,177 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>What We Offer</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Georgia', serif;
+    }
+
+    body {
+      background: url('background.png') no-repeat center/cover;
+      color: #0f2e2e;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeInBody 1s ease-in-out;
+    }
+
+    @keyframes fadeInBody {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    header {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      padding: 20px 40px;
+      box-sizing: border-box;
+    }
+
+    header a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.1rem;
+      text-shadow: 0 0 8px rgba(0,0,0,0.5);
+      transition: color 0.3s;
+    }
+
+    header a:hover {
+      color: #00eaff;
+    }
+
+    h1 {
+      margin-top: 60px;
+      font-size: 2.2rem;
+      color: #fff;
+      text-shadow: 0 0 10px rgba(0,0,0,0.4);
+      animation: slideUp 1.2s ease-in-out;
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .offer-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 80px;
+      gap: 100px;
+      flex-wrap: wrap;
+      animation: fadeInGlass 1.4s ease-in-out;
+    }
+
+    @keyframes fadeInGlass {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .offer-box {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(0, 234, 255, 0.15);
+      padding: 30px;
+      width: 180px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .offer-box:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 25px rgba(0, 234, 255, 0.3);
+    }
+
+    .offer-box img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin-bottom: 15px;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+
+    .offer-box:hover img {
+      transform: scale(1.1);
+      opacity: 0.95;
+    }
+
+    .offer-box p {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #fff;
+      text-shadow: 0 0 5px rgba(0,0,0,0.4);
+      margin-top: 5px;
+    }
+
+    a.offer-link {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .offer-container {
+        gap: 50px;
+      }
+      .offer-box {
+        width: 140px;
+        padding: 20px;
+      }
+      .offer-box img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html">Home</a>
+  </header>
+
+  <h1>What we offer</h1>
+
+  <div class="offer-container">
+    <a href="index.html" class="offer-link">
+      <div class="offer-box">
+        <img src="Foodicon.png" alt="Add a Product">
+        <p>FOOD & DELICIOUS</p>
+      </div>
+    </a>
+
+    <a href="categories.html" class="offer-link">
+      <div class="offer-box">
+        <img src="Crafticon.png" alt="Feature">
+        <p>HANDMADE CRAFT</p>
+      </div>
+    </a>
+
+    <a href="index.html" class="offer-link">
+      <div class="offer-box">
+        <img src="Clothicon.png" alt="Service">
+        <p>CLOTHING</p>
+      </div>
+    </a>
+  </div>
+
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What We Offer</title>
+  <style>
     body {
       margin: 0;
       font-family: 'Georgia', serif;
@@ -94,27 +265,27 @@
   <h1>What we offer</h1>
 
   <div class="offer-container">
-    <a href="products.html" class="offer-link">
+    <a href="index.html" class="offer-link">
       <div class="offer-box">
-        <img src="product.jpg" alt="Add a Product">
-        <p>Add a product</p>
+        <img src="Foodicon.png" alt="Add a Product">
+        <p>FOOD&DELICIOUS</p>
       </div>
     </a>
 
-    <a href="features.html" class="offer-link">
+    <a href="categories.html" class="offer-link">
       <div class="offer-box">
-        <img src="feature.jpg" alt="Feature">
-        <p>Or feature</p>
+        <img src="Crafticon.png" alt="Feature">
+        <p>HANDMADE CRAFT</p>
       </div>
     </a>
 
-    <a href="services.html" class="offer-link">
+    <a href="index.html" class="offer-link">
       <div class="offer-box">
-        <img src="service.jpg" alt="Service">
+        <img src="Clothicon.png" alt="Service">
         <p>Or service</p>
       </div>
     </a>
   </div>
 
 </body>
-</html>
+</html> -->
